@@ -1,0 +1,286 @@
+﻿@{
+    ViewBag.Title = "About Green Oak";
+}
+<div class="container body-content">
+    <br />
+    <div class="spacer_device"></div>
+    <h2>What we do</h2>
+
+    <div class="box" style="font-family: Nunito-Regular">
+
+        <h4 style="margin-left: 15px; margin-right: 15px; color:#fff; text-align:center">
+            Our company is founded on helping businesses flourish through technological innovation. Whether it be a new web app, an API integration, analytics or anything
+            in between, we aim to provide full-stack software development for companies who want robust, scalable software solutions at a competitive price.
+            <br /><br />
+            Our goal is to give your business the technological "roots" to help it grow and stand the test of time, much like an oak - one of the strongest trees in the world.
+            Whether you are looking to start with a new idea or want to add value to your current business, we are committed to helping your business develop and maintain a strong technological infrastructure.
+            <br /><br />
+            We believe in providing excellent service to our clients, and as you grow your oak, we grow as well!
+        </h4>
+
+    </div>
+
+    <!--<div class="separator">
+        <svg class="separator__svg" width="100%" height="250" viewBox="0 0 100 100" preserveAspectRatio="none" fill="blue" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 100 100 V 10 L 50 0" />
+            <path d="M -30 -73 L 100 18 V 10 Z" fill="#fff" stroke-width="0" />
+        </svg>
+    </div>-->
+
+    <div class="wrapper">
+        <h2>Meet the Team</h2>
+        <div class="our_team">
+            <div class="team_member">
+                <div class="member_img">
+                    <img src="../Content/nick3.png" alt="" />
+                </div>
+                <h3>Nick Baker</h3>
+                <span>Owner & Principal Software Engineer</span>
+                <p>Software engineer with a passion with mobile development and solving complex problems. Driven on aligning our clients to everyday operations.</p>
+            </div>
+            <div class="team_member">
+                <div class="member_img">
+                    <img src="../Content/MattPic2.png" alt="" />
+                </div>
+                <h3>Matt Bailey</h3>
+                <span>Principal Backend Engineer</span>
+                <p>Professional engineer with a knack for writing backend business logic, data engineering, ETL operations, file-based exports, API integrations and much more. </p>
+            </div>
+            <div class="team_member">
+                <div class="member_img">
+                    <img src="../content/JacobProfilePic.png" alt="" />
+                </div>
+                <h3>Jacob Long</h3>
+                <span>Principal Software Engineer</span>
+                <p>Background in DevOps and Automation. Experience including but not limited to C#, Python, Azure, BDD Framework, Jenkins, and GitHub Actions.</p>
+            </div>
+        </div>
+    </div>
+    <br /><br /><br />
+    <div class="row" style="text-align:center; font-family: Nunito-Regular">
+        <div style="margin-top: 100px;"></div>
+        <h1 class="header-two">Journey into technological<span class="strong_roots"> innovation</span></h1>
+        <br />
+        <div class="container-row-center">
+            <p style="text-align:center;">@Html.ActionLink("Get Started", "Contact", "Home", new { area = "" }, new { @class = "btn btn-primary btn-lg", @style = "text-align:center; color: white; font-family: Traffolight" })</p>
+
+        </div>
+    </div>
+</div>
+<div class="spacer"></div>
+<style>
+
+    h2 {
+        text-align: center;
+        color: #fff;
+        font-family: Nunito-Regular;
+    }
+
+    .header-two {
+        color: #fff;
+    }
+
+    .strong_roots {
+        color: #349c54;
+    }
+
+    .spacer {
+        height: 330px;
+    }
+
+ 
+
+    .container-row-center {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+     @@media only screen and (min-width : 320px) {
+        .box {
+            display: inline-block;
+            border-radius: 25px;
+            background: blue;
+            width: 100%;
+            height: 600px;
+        }
+
+        .spacer_device {
+            height: 55px;
+        }
+    }
+
+    @@media only screen and (min-width : 375px) {
+        .box {
+            display: inline-block;
+            border-radius: 25px;
+            background: blue;
+            width: 100%;
+            height: 500px;
+        }
+
+     
+    }
+
+    /* Extra Small Devices, Phones */
+    @@media only screen and (min-width : 480px) {
+        .box {
+            display: inline-block;
+            border-radius: 25px;
+            background: blue;
+            width: 100%;
+            height: 410px;
+        }
+    }
+
+    @@media only screen and (min-width : 620px) {
+        .box {
+            display: inline-block;
+            border-radius: 25px;
+            background: blue;
+            width: 100%;
+            height: 310px;
+        }
+    }
+
+
+    /* Small Devices, Tablets */
+    @@media only screen and (min-width : 768px) {
+        .box {
+            display: inline-block;
+            border-radius: 25px;
+            background: blue;
+            width: 100%;
+            height: 280px;
+        }
+    }
+
+    /* Medium Devices, Desktops */
+    @@media only screen and (min-width : 992px) {
+        .box {
+            display: inline-block;
+            border-radius: 25px;
+            background: blue;
+            width: 100%;
+            height: 220px;
+        }
+    }
+
+    /* Large Devices, Wide Screens */
+    @@media only screen and (min-width : 1200px) {
+        .box {
+            display: inline-block;
+            border-radius: 25px;
+            background: blue;
+            width: 100%;
+            height: 200px;
+        }
+    }
+
+    separator {
+        bottom: -5px;
+        left: 0;
+        margin: 0;
+        overflow: hidden;
+        position: absolute;
+        width: 100%;
+    }
+
+
+
+    .section-one {
+        position: relative;
+        padding: 200px 0 350px;
+        .section-one__title
+
+    {
+        color: #fff;
+        font-size: 35px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .section-one__descr {
+        color: #fff;
+        font-size: 16px;
+        line-height: 1.5;
+        max-width: 300px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    }
+
+    .wrapper {
+        margin-top: 0px;
+        text-align: center;
+    }
+
+        .wrapper h1 {
+            color: #fff;
+            margin-bottom: 25px;
+        }
+
+        .wrapper .our_team {
+            display: flex;
+            width: auto;
+            justify-content: center;
+            flex-wrap: wrap;
+            font-family: Nunito-Regular;
+        }
+
+            .wrapper .our_team .team_member {
+                width: 320px;
+                height: 400px;
+                margin: 10px;
+                background: blue;
+                padding: 20px 10px;
+                border-radius: 25px;
+             
+            }
+
+                .wrapper .our_team .team_member .member_img {
+                    background: #e9e5fa;
+                    max-width: 175px;
+                    width: 100%;
+                    height: 175px;
+                    margin: 0 auto;
+                    border-radius: 50%;
+                    pointer-events: none;
+                    user-select: none;
+                    -moz-user-select: none;
+                    -webkit-user-drag: none;
+                    box-shadow: 0px 10px 10px 4px #349c54;
+                }
+
+                    .wrapper .our_team .team_member .member_img img {
+                        width: 175px;
+                        height: 175px;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        border: 5px solid #ffffff;
+                        margin: auto;
+                    }
+
+                .wrapper .our_team .team_member h3 {
+                    color: #fff;
+                    font-size: 25px;
+                    margin: 15px 0 0;
+                }
+
+                .wrapper .our_team .team_member span {
+                    font-size: 14px;
+                    color: #fff;
+                }
+
+                .wrapper .our_team .team_member p {
+                    margin-top: 20px;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: #fff;
+                }
+</style>
+<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>

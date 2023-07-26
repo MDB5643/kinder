@@ -1,0 +1,404 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>AOS.init({
+        duration: 3000,
+        once: true,
+        });</script>
+<div class='fixed'></div>
+<div class="section-one">
+    <div class="container body-content">
+        <div class="container vertical-center">
+            <div class="row" style="text-align: center; font-family: Nunito-Regular; margin-bottom: 100px;">
+                <h1 class="header">Welcome! We are so glad you're here!</h1>
+            </div>
+
+        </div>
+    </div>
+    <div class="space"></div>
+    <!-- begin Separator -->
+    <div class="separator">
+        <svg class="separator__svg" width="100%" height="250" viewBox="0 0 100 100" preserveAspectRatio="none" fill="blue" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 100 100 V 10 L 0 100" />
+            <path d="M 30 73 L 100 18 V 10 Z" fill="#fff" stroke-width="0" />
+        </svg>
+    </div>
+    <!-- end Separator -->
+</div>
+<div class="section-two">
+    <div class="container body-content">
+        <div data-aos="fade-up" data-aos-duration="1500">
+            <h2 style="text-align: center; font-family: Nunito-Regular">What's new in Kindergarten?</h2>
+            <br />
+            <div class="container-row-center">
+                <div class="container-column-center">
+                        <img src="../Content/cartoon-buffalo-clipart-md.png" width="110" draggable="false" />
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <br />
+        <div div data-aos="slide-left" data-aos-duration="2000">
+            <div class='line-icon'></div>
+        </div>
+
+        <br />
+        <div div data-aos="fade-in" data-aos-duration="1500">
+            <h2>Stay up to date!</h2>
+            <h4>
+                Check here for updates and announcements
+            </h4>
+        </div>
+
+        <div class="container-row-outside">
+            <div class="container-column">
+                <div div data-aos="fade-left" data-aos-duration="2000">
+                    <div class="container-row" style="margin-bottom: 15px;">
+                        <div class="container-column">
+                            <h2>Headline</h2>
+                            <h4>
+                                Small description with news or Prairie Center related updates, maybe with link to main school site
+                            </h4>
+                        </div>
+
+                    </div>
+                </div>
+                <div div data-aos="fade-right" data-aos-duration="2000" data-aos-delay="500">
+                    <div class="container-row" style="margin-bottom: 15px;">
+                        <div class="container-column">
+                            <h2>Headline</h2>
+                            <h4>
+                                Small description with news or Prairie Center related updates, maybe with link to main school site
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div div data-aos="fade-left" data-aos-duration="2000" data-aos-delay="1000">
+                    <div>
+                        <div class="container-row" style="margin-bottom: 15px;">
+                            <div class="container-column">
+                                <h2>Headline</h2>
+                                <h4>
+                                    Small description with news or Prairie Center related updates, maybe with link to main school site
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    img {
+        pointer-events: none;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-drag: none;
+    }
+
+    .fadeInTop {
+        -webkit-animation: fadeInTop 1.2s both;
+        -moz-animation: fadeInTop 1.2s both;
+        -o-animation: fadeInTop 1.2s both;
+        animation: fadeInTop 1.2s both;
+    }
+
+    .hidden {
+        opacity: 0;
+        -webkit-transform: translateY(-50px);
+        -moz-transform: translateY(-50px);
+        -o-transform: translateY(-50px);
+        transform: translateY(-50px);
+        transition: all 1.2s;
+    }
+
+    .show {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
+        transition: all 1.2s;
+    }
+
+    .line-icon {
+        box-sizing: border-box;
+        position: relative;
+        text-align: center;
+        background-image: url('../content/logo_white_transparent.png');
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        font-size: 0;
+        height: 40px;
+    }
+
+        .line-icon::before, .line-icon::after {
+            box-sizing: border-box;
+            width: 40%;
+            height: 1px;
+            border-top: 1px solid cornflowerblue;
+            display: inline-block;
+            content: '';
+            margin-left: 5%;
+            margin-right: 5%;
+            position: relative;
+            top: 50%;
+            -moz-transform: translatey(-50%);
+            -ms-transform: translatey(-50%);
+            -o-transform: translatey(-50%);
+            -webkit-transform: translatey(-50%);
+            transform: translatey(-50%);
+        }
+
+
+    .header {
+        color: #fff;
+        opacity: 0;
+        animation: fadeInAnimation ease 3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
+    .header-below {
+        color: #fff;
+        animation: fadeInAnimation ease 3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-delay: 3s;
+        opacity: 0;
+    }
+
+    .header-two {
+        padding-left: 10px;
+        padding-right: 10px;
+        color: blue;
+    }
+
+    .circle {
+        background: #fff;
+        border-radius: 50%;
+        width: 110px;
+        height: 110px;
+        pointer-events: none;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-drag: none;
+        box-shadow: 0px 10px 15px 5px #349c54;
+    }
+
+    .container-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        word-wrap: break-word;
+    }
+
+    .container-row-center {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .container-row-outside {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .container-column {
+        display: inline-flex;
+        flex-direction: column;
+        margin-left: 20px;
+        align-items: start;
+        justify-self: start;
+        flex-wrap: wrap;
+        word-break: break-word;
+    }
+
+    .container-column-center {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 15px;
+        margin-right: 15px;
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+
+    .container-column h2 {
+        padding: 0;
+    }
+
+    .horizontal-center {
+        opacity: 0;
+        animation: fadeInAnimation ease 3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-delay: 5s;
+    }
+
+
+
+    h2 {
+        color: #fff;
+        font-family: Nunito-Regular;
+    }
+
+    h3 {
+        font-family: Nunito-Regular;
+    }
+
+    h4 {
+        color: whitesmoke;
+        font-family: Nunito-Regular
+    }
+
+    .fixed {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: cornflowerblue;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .myimage {
+        position: fixed;
+        background-color: cornflowerblue;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100vh;
+        height: 100vw;
+    }
+
+    .skewed {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 400px;
+        background: cornflowerblue;
+        z-index: 0;
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% calc(100% - 150px));
+    }
+
+    .strong_roots {
+        color: #349c54;
+    }
+
+    body {
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        min-width: 100%; /* this is the important part*/
+    }
+
+    .space {
+        height: 500px;
+    }
+
+    .section-one {
+        margin: 0;
+        position: relative;
+        padding: 50px 0 350px;
+        .section-one__title
+
+    {
+        color: #fff;
+        font-size: 35px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .section-one__descr {
+        color: #fff;
+        font-size: 16px;
+        line-height: 1.5;
+        max-width: 300px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    }
+
+    .section-two {
+        margin: 0;
+        background-color: blue;
+        padding: 50px 0 100px;
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        .section-two__title
+
+    {
+        color: #fff;
+        font-size: 35px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .section-two__descr {
+        color: #fff;
+        font-size: 16px;
+        line-height: 1.5;
+        max-width: 300px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    }
+
+
+    /* -------------------------------------------------------------------------
+           begin Separator
+         * ------------------------------------------------------------------------- */
+    .separator {
+        bottom: -5px;
+        left: 0;
+        margin: 0;
+        overflow: hidden;
+        position: absolute;
+        width: 100%;
+    }
+    /* -------------------------------------------------------------------------
+           end Separator
+         * ------------------------------------------------------------------------- */
+
+    /* begin Media Max-Width 767
+        ============================================================================ */
+
+    @@keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+</style>

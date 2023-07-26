@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prairie Center Kindergarten</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container" style="margin-top: 10px">
+            <div class="navbar-header" style="font-family: Organo;">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                @Html.ActionLink("Prairie Center Kindergarten", "Index", "Home", new { area = "" }, new { @class = "navbar-brand", @style = "font-family: Traffolight" })
+            </div>
+            <div class="navbar-collapse collapse">
+               
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Kindergarten Info", "Info", "Home")</li>
+                    <li>@Html.ActionLink("At Home Learning", "AtHomeLearning", "Home")</li>
+                    <li>@Html.ActionLink("Mrs. Bailey's Class", "Bailey", "Home")</li>
+                    <li>@Html.ActionLink("Mrs. Gniadek's Class", "Gniadek", "Home")</li>
+                    <li>@Html.ActionLink("Mrs. Renne's Class", "Renne", "Home")</li>
+                    <!--<li></li>-->
+                </ul>
+           
+            </div>
+        </div>
+    </div>
+    <div>
+        @RenderBody()
+        <div class="container body-content" style="font-family: Nunito-Regular">
+            <footer class="footer">
+                <img src="../content/PC_CIRCLE_LOGO.png" width="50" />
+                <div style="margin: 10px 0 10px 0;"></div>
+                <h4>Prairie Center Main Site</h4>
+            </footer>
+        </div>
+    </div>
+    <style>
+        html, body {
+            width: 100vw;
+            margin: 0px;
+            padding: 0px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            background-color: cornflowerblue;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .container-row {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .nav {
+            padding-top: 10px;
+        }
+
+        .navbar {
+            background-color: blue;
+            opacity: 0.95;
+            height: 70px;
+        }
+
+
+
+        .footer {
+            position: relative;
+            width: 100%;
+            background: transparent;
+            min-height: 100px;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        h4 {
+            color: #fff;
+        }
+
+        .social-icon,
+        .menu {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+            flex-wrap: wrap;
+        }
+
+        .social-icon__item,
+        .menu__item {
+            list-style: none;
+        }
+
+        .social-icon__link {
+            font-size: 2.5rem;
+            color: #fff;
+            margin: 0 10px;
+            display: inline-block;
+            transition: 0.5s;
+        }
+
+            .social-icon__link:hover {
+                color: blue;
+                transform: translateY(-10px);
+            }
+
+        .menu__link {
+            font-size: 1.6rem;
+            color: #fff;
+            margin: 0 10px;
+            display: inline-block;
+            transition: 0.5s;
+            text-decoration: none;
+            opacity: 0.75;
+            font-weight: 300;
+        }
+
+            .menu__link:hover {
+                color: blue;
+                opacity: 1;
+            }
+
+        .footer p {
+            color: #fff;
+            margin: 20px 0 10px 0;
+            font-size: 1rem;
+            font-weight: 300;
+        }
+
+        @@media only screen and (min-width : 320px) {
+            .navbar-brand {
+                font-size: 16px;
+            }
+            .navbar-collapse {
+                background-color: blue;
+            }
+         
+        }
+
+        @@media only screen and (min-width : 375px) {
+            .navbar-brand {
+                font-size: 20px;
+            }
+            
+        }
+
+        @@media only screen and (min-width : 500px) {
+            .navbar-brand {
+                font-size: 28px;
+            }
+           
+        }
+    </style>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
