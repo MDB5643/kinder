@@ -139,6 +139,7 @@
   <ItemGroup>
     <Content Include="Content\29-295867_summer-clipart-happy-smiling-transparent-background-cute-sun.png" />
     <Content Include="Content\automation.svg" />
+    <Content Include="Content\BaileyPage1.PNG" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -162,6 +163,7 @@
     <Content Include="Content\sunny.png" />
     <Content Include="Content\thunder_storm.svg" />
     <Content Include="Content\web.svg" />
+    <Content Include="Content\Welcome.PNG" />
     <Content Include="Views\GreenOakForest.gif" />
     <Content Include="Content\Leaf_copy.png" />
     <Content Include="Content\Leaf_Transparent_Green.png" />
@@ -177,6 +179,11 @@
     <Content Include="Content\Organo.ttf" />
     <Content Include="Content\Steronite.ttf" />
     <Content Include="Content\Traffolight.otf" />
+    <Content Include="Content\BacktoSchoolOpenHouseMeettheTeacherEditableFormsandEssentials-1.pdf" />
+    <Content Include="Content\DiscoPages.pdf" />
+    <Content Include="Content\KimInfo.pdf" />
+    <Content Include="Content\Back2School.pdf" />
+    <Content Include="Back2School.pdf" />
     <None Include="Properties\PublishProfiles\FTPProfile.pubxml" />
     <None Include="Properties\PublishProfiles\FTPProfile1.pubxml" />
     <None Include="Properties\PublishProfiles\GreenOakWebPublish.pubxml" />
@@ -202,7 +209,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Info.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\CustomerPortal.cshtml" />
@@ -211,6 +218,8 @@
     <Content Include="Views\Shared\_ContactPartial.cshtml" />
     <Content Include="Views\Home\ContactPlaceholder.cshtml" />
     <Content Include="Views\Home\Portfolio.cshtml" />
+    <Content Include="Views\Home\AtHomeLearning.cshtml" />
+    <Content Include="Views\Home\Bailey.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

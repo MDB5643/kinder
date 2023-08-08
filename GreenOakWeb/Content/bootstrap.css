@@ -4508,6 +4508,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     background-image: url(sunny.png);
     background-size: contain;
     background-repeat: no-repeat;
+    color: yellow;
 }
     .navbar-brand:hover,
     .navbar-brand:focus {
@@ -4562,6 +4563,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   padding-bottom: 10px;
   padding-right: 30px;
   line-height: 0px;
+  color: yellow;
 }
 @media (max-width: 767px) {
   .navbar-nav .open .dropdown-menu {
@@ -4597,6 +4599,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .navbar-nav > li > a {
     padding-top: 15px;
     padding-bottom: 15px;
+    color: yellow;
   }
 }
 .navbar-form {
@@ -4732,7 +4735,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-color: #e7e7e7;
 }
 .navbar-default .navbar-brand {
-  color: #777;
+  color: yellow;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
@@ -4743,7 +4746,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   color: #777;
 }
 .navbar-default .navbar-nav > li > a {
-  color: #777;
+  color: yellow;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {

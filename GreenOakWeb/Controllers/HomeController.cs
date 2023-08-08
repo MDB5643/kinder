@@ -25,23 +25,23 @@ namespace GreenOakWeb.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Info()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Info!";
 
             return View();
         }
 
-        public ActionResult Verification()
+        public ActionResult Bailey()
         {
-            ViewBag.Message = "Are you sure you're not a robot?";
+            ViewBag.Message = "Mrs. Bailey's class!";
             return View(new RECaptcha());
         }
 
         [HttpGet]
-        public ActionResult Contact()
+        public ActionResult AtHomeLearning()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "At home learning!";
 
             ContactModel _contactModel = new ContactModel();
             return View(_contactModel);
@@ -54,94 +54,5 @@ namespace GreenOakWeb.Controllers
             return View();
         }
 
-        [HttpPost]
-        public ActionResult Contact(ContactModel model)
-        {
-            ContactModel _model = new ContactModel();
-            ViewBag.Message = "Your contact page.";
-            if (ModelState.IsValid)
-            {
-                if (model.Email != null && ValidateContactSubmit(model) == false)
-                {
-                    ContactModel _modelError = new ContactModel();
-                    _modelError.Name = model.Name;
-                    _modelError.Subject = model.Subject;
-                    _modelError.Body = model.Body;
-                    _modelError.Email = model.Email;
-
-                    return View(_modelError);
-                }
-
-                //Read SMTP section from Web.Config.
-                SmtpSection smtpSection = (SmtpSection)ConfigurationManager.GetSection("system.net/mailSettings/smtp");
-
-                using (MailMessage mm = new MailMessage(smtpSection.From, smtpSection.Network.UserName))
-                {
-                    mm.Subject = model.Subject;
-                    mm.Body = "Name: " + model.Name + "<br /><br />Email: " + model.Email + "<br />" + model.Body;
-                    if (model.Attachment != null)
-                    {
-                        if (model.Attachment.ContentLength > 0)
-                        {
-                            string fileName = Path.GetFileName(model.Attachment.FileName);
-                            mm.Attachments.Add(new Attachment(model.Attachment.InputStream, fileName));
-                        }
-                    }
-
-                    mm.IsBodyHtml = true;
-
-                    using (SmtpClient smtp = new SmtpClient("smtp.gmail.com"))
-                    {
-                        smtp.Host = smtpSection.Network.Host;
-                        smtp.EnableSsl = true;
-                        NetworkCredential networkCred = new NetworkCredential(smtpSection.Network.UserName, smtpSection.Network.Password);
-                        smtp.UseDefaultCredentials = false;
-                        smtp.Credentials = networkCred;
-                        smtp.Port = smtpSection.Network.Port;
-                        smtp.Send(mm);
-                        ViewBag.Message = "Email sent sucessfully.";
-                    }
-                }
-                _model.SubmissionSuccess = true;
-            }
-            else
-            {
-                _model.SubmissionSuccess = false;
-            }
-            
-            _model.Name = "";
-            _model.Subject = "";
-            _model.Body = "";
-            _model.Email = "";
-
-            return View(_model);
-        }
-
-        private bool ValidateContactSubmit(ContactModel Model)
-        {
-            var emailRegex = @"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$";
-            var isValidEmail = Regex.Match(Model.Email, emailRegex, RegexOptions.IgnoreCase);
-            if (!isValidEmail.Success)
-            {
-                ModelState.AddModelError("error", "Email address is invalid");
-                return false;
-            }
-            return true;
-        }
-
-        [HttpPost]
-        public JsonResult AjaxMethod(string response)
-        {
-            RECaptcha recaptcha = new RECaptcha();
-            string url = "https://www.google.com/recaptcha/api/siteverify?secret=" + recaptcha.Secret + "&response=" + response;
-            recaptcha.Response = (new WebClient()).DownloadString(url);
-            return Json(recaptcha);
-        }
-
-        public ActionResult Portfolio()
-        {
-            ViewBag.Message = "portfolio?";
-            return View();
-        }
     }
 }
