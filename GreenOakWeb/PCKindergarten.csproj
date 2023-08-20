@@ -137,18 +137,32 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\AHL1.PNG" />
+    <Content Include="Content\AHL2.PNG" />
+    <Content Include="Content\baileyqr.PNG" />
+    <Content Include="Content\commpage101.PNG" />
+    <Content Include="Content\commpage301.PNG" />
+    <Content Include="favicon.ico" />
     <Content Include="Content\29-295867_summer-clipart-happy-smiling-transparent-background-cute-sun.png" />
     <Content Include="Content\automation.svg" />
     <Content Include="Content\BaileyPage1.PNG" />
+    <Content Include="Content\baileypage2.PNG" />
+    <Content Include="Content\baileypage3.PNG" />
+    <Content Include="Content\baileypage4.PNG" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\cartoon-buffalo-clipart-md.png" />
     <Content Include="Content\cloudy.png" />
+    <Content Include="Content\commpage1.PNG" />
+    <Content Include="Content\commpage2.PNG" />
+    <Content Include="Content\commpage3.PNG" />
+    <Content Include="Content\commpage4.PNG" />
     <Content Include="Content\data_analytics_t.svg" />
     <Content Include="Content\Input.css" />
     <Content Include="Content\JacobProfilePic.png" />
+    <Content Include="Content\KimPage.PNG" />
     <Content Include="Content\landscape_back.png" />
     <Content Include="Content\landscape_test.jpg" />
     <Content Include="Content\leaf.svg" />
@@ -167,7 +181,6 @@
     <Content Include="Views\GreenOakForest.gif" />
     <Content Include="Content\Leaf_copy.png" />
     <Content Include="Content\Leaf_Transparent_Green.png" />
-    <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -184,6 +197,8 @@
     <Content Include="Content\KimInfo.pdf" />
     <Content Include="Content\Back2School.pdf" />
     <Content Include="Back2School.pdf" />
+    <Content Include="Content\AtHomeLearning.pdf" />
+    <Content Include="Content\AtHomeLearning2.pdf" />
     <None Include="Properties\PublishProfiles\FTPProfile.pubxml" />
     <None Include="Properties\PublishProfiles\FTPProfile1.pubxml" />
     <None Include="Properties\PublishProfiles\GreenOakWebPublish.pubxml" />

@@ -1,0 +1,166 @@
+﻿@model GreenOakWeb.Models.ContactModel
+
+@{
+    ViewBag.Title = "Contact us to get started!";
+}
+
+
+@Styles.Render("~/Content/Input.css")
+
+<style>
+   
+    .container-row-center {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .container-column-center {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 15px;
+        margin-right: 15px;
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+    .spacer {
+        height: 400px;
+    }
+
+
+    @@media only screen and (min-width : 320px) {
+        .spacer_device {
+            height: 55px;
+        }
+
+    }
+
+    @@media only screen and (min-width : 375px) {
+        .spacer_device {
+            height: 55px;
+        }
+       
+    
+    }
+
+    @@media only screen and (min-width : 400px) {
+        .spacer_device {
+            height: 55px;
+        }
+
+      
+    }
+
+    
+
+
+</style>
+
+<div class="container body-content">
+    <br />
+    <div class="spacer_device"></div>
+    <div class="page" style="display: flex; text-align: center; justify-content: center; flex-wrap: wrap; font-family: Nunito-Regular;">
+        <h2 style="color: #fff">@ViewBag.Title</h2>
+
+        @if (Model.SubmissionSuccess == true)
+        {
+            <h3 style="text-align: center; color: white;">Thank you for your submission! We will review your request and reach out if we think you're a match for Green Oak!</h3>
+        }
+        else
+        {
+            <h3 style="text-align: center; color: white; flex-wrap: wrap">Leave us your name, email address, and a brief description of what you would like to accomplish with us:</h3>
+
+            <h4>
+                @Html.ValidationMessage("error", new { @class = "text-danger" }) <br />
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" }) <br />
+                @Html.ValidationMessageFor(model => model.Subject, "", new { @class = "text-danger" }) <br />
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" }) <br />
+            </h4>
+            <div class="container">
+                <row>
+                    <div class="col-md-12">
+
+                        @using (Html.BeginForm("Contact", "Home", FormMethod.Post, new { enctype = "multipart/form-data", style = "text-align: center; padding-left: 15px; padding-right: 15px" }))
+                        {
+
+                            <div class="field field_v2">
+
+                                <label for="model.Name" class="ha-screen-reader">Name</label>
+                                @Html.TextBoxFor(model => model.Name, new { @class = "field__input", placeholder = "e.g. John Smith" })
+
+                                <span class="field__label-wrap" aria-hidden="true">
+                                    <span class="field__label">Name</span>
+                                </span>
+
+                            </div>
+                            <br />
+                            <br />
+                            <br />
+                            <div class="field field_v2">
+
+                                <label for="model.Subject" class="ha-screen-reader">Subject</label>
+                                @Html.TextBoxFor(model => model.Subject, new { @class = "field__input", placeholder = "e.g. Help with website" })
+
+                                <span class="field__label-wrap" aria-hidden="true">
+                                    <span class="field__label">Subject</span>
+                                </span>
+
+                            </div>
+                            <br />
+                            <br />
+                            <br />
+                            <div class="field field_v2">
+
+                                <label for="model.Email" class="ha-screen-reader">Email Address</label>
+                                @Html.TextBoxFor(model => model.Email, new { @class = "field__input", placeholder = "e.g. JohnSmith@gmail.com" })
+
+                                <span class="field__label-wrap" aria-hidden="true">
+                                    <span class="field__label">Email Address</span>
+                                </span>
+
+                            </div>
+                            <br />
+                            <br />
+                            <br />
+                            <!--<textarea id="model.Message" for="model.Message" name="message"></textarea>-->
+                            @Html.TextAreaFor(model => model.Body, new { style = "padding: 10px" })
+                            <br />
+                            @Html.ValidationMessageFor(model => model.Body, "", new { @class = "text-danger" })
+                            <br />
+                            <row style="text-align:center">
+                            </row>
+                            <br />
+                            <br />
+                            <row>
+                                <col-2></col-2>
+                                <col-10><input type="submit" id="contactSubmit" value="Send" hidden /></col-10>
+                            </row>
+                            <br />
+                        }
+                    </div>
+                </row>
+                <br />
+            </div>
+            <div class="container-row-center">
+                @Html.Partial("_ContactPartial")
+            </div>
+
+        }
+    </div>
+    <div class="spacer"></div>
+</div>
+       
+
+        <script>
+            $(function () {
+                $('#contactSubmit').click(function () {
+
+                });
+            })
+
+        </script>

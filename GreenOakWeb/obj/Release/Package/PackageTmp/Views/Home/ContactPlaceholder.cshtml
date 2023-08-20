@@ -1,0 +1,80 @@
+﻿@model GreenOakWeb.Models.ContactModel
+
+@{
+    ViewBag.Title = "Contact us to get started!";
+}
+
+
+@Styles.Render("~/Content/Input.css")
+
+<style>
+
+    .container-row-center {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .container-column-center {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 15px;
+        margin-right: 15px;
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+
+    .spacer {
+        height: 400px;
+    }
+
+
+    @@media only screen and (min-width : 320px) {
+        .spacer_device {
+            height: 55px;
+        }
+    }
+
+    @@media only screen and (min-width : 375px) {
+        .spacer_device {
+            height: 55px;
+        }
+    }
+
+    @@media only screen and (min-width : 400px) {
+        .spacer_device {
+            height: 55px;
+        }
+    }
+</style>
+
+<div class="container body-content">
+    <br />
+    <div class="spacer_device"></div>
+    <div class="page" style="display: flex; text-align: center; justify-content: center; flex-wrap: wrap; font-family: Nunito-Regular;">
+        <div class="container">
+            <h2 style="color: #fff">@ViewBag.Title</h2>
+            <br/>
+            <row>
+                <h3 style="text-align: center; color: white; flex-wrap: wrap">Please send all inquiries to Contact@GreenOakSolutions.com</h3>
+            </row>
+
+        </div>
+    </div>
+    <div class="spacer"></div>
+</div>
+
+
+<script>
+            $(function () {
+                $('#contactSubmit').click(function () {
+
+                });
+            })
+
+</script>
