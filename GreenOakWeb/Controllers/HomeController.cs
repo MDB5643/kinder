@@ -35,7 +35,7 @@ namespace GreenOakWeb.Controllers
         public ActionResult Bailey()
         {
             ViewBag.Message = "Mrs. Bailey's class!";
-            return View(new RECaptcha());
+            return View();
         }
 
         [HttpGet]
@@ -47,12 +47,10 @@ namespace GreenOakWeb.Controllers
             return View(_contactModel);
         }
 
-        public ActionResult CustomerPortal()
+        public ActionResult SnackSchedule()
         {
-            ViewBag.Message = "Your personal portal.";
-
+            ViewBag.Message = "Snack Schedule!";
             return View();
         }
-
     }
 }

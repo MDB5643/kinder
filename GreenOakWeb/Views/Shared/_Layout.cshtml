@@ -24,6 +24,11 @@
                
                 <ul class="nav navbar-nav">
 
+                    <li>
+                        <a href='@Url.Action("SnackSchedule", "Home")' style="padding-top: 5px !important">
+                            <img src='@Url.Content("../Content/sandwich.png")' width="30"; height="30" />
+                        </a>
+                    </li>
                     <li>@Html.ActionLink("Kindergarten Info", "Info", "Home", new { @style = "color: yellow" })</li>
                     <li>@Html.ActionLink("Mrs. Bailey's Class", "Bailey", "Home", new { @style = "color: yellow" })</li>
                     <li>@Html.ActionLink("At Home Learning", "AtHomeLearning", "Home", new { @style = "color: yellow" })</li>
@@ -139,6 +144,12 @@
             font-weight: 300;
         }
 
+        .resizeimage {
+            max-width: 100%;
+            width: 100%;
+            height: auto !important;
+        }
+
         @@media only screen and (min-width : 270px) {
             .navbar-brand {
                 font-size: 10px;
@@ -146,6 +157,10 @@
 
             .navbar-collapse {
                 background-color: cornflowerblue;
+            }
+
+            .resizeimage{
+                max-width: 320px;
             }
 
             .fixed {
@@ -163,6 +178,9 @@
             .navbar-collapse {
                 background-color: cornflowerblue;
             }
+            .resizeimage{
+                max-width: 320px;
+            }
             .fixed {
                 background-size: contain !important;
                 background-position: top !important;
@@ -173,6 +191,10 @@
             .navbar-brand {
                 font-size: 16px;
             }
+            .resizeimage{
+                max-width: 420px;
+                max-height: 420px;
+            }
             .navbar-collapse {
                 background-color: cornflowerblue;
             }
@@ -182,6 +204,10 @@
         @@media only screen and (min-width : 500px) {
             .navbar-brand {
                 font-size: 20px;
+            }
+            .resizeimage{
+                max-width: 480px;
+                max-height: 480px;
             }
             .navbar-collapse {
                 background-color: cornflowerblue;
