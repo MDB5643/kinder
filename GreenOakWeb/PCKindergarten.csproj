@@ -140,10 +140,14 @@
     <Content Include="Content\112y_axpx_220118.png" />
     <Content Include="Content\AHL1.PNG" />
     <Content Include="Content\AHL2.PNG" />
+    <Content Include="Content\AHLNewPanel.PNG" />
     <Content Include="Content\baileyqr.PNG" />
     <Content Include="Content\commpage101.PNG" />
     <Content Include="Content\commpage301.PNG" />
+    <Content Include="Content\Contact0907.PNG" />
+    <Content Include="Content\Curriculum0907.PNG" />
     <Content Include="Content\Curriculum2.PNG" />
+    <Content Include="Content\ImportantDates-new.PNG" />
     <Content Include="Content\sandwich.png" />
     <Content Include="Content\schedule2.PNG" />
     <Content Include="Content\Snacks1.PNG" />
